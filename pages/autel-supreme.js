@@ -16,6 +16,7 @@ let items = [
     },
 ];
 
-await window.init();
-window.initInteractableItems(items);
-window.initInventory(items);
+window.init().then(() => {
+    window.initInteractableItems(items);
+    window.initInventory(items);
+});
