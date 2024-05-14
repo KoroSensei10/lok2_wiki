@@ -3,7 +3,7 @@
 const getJsFile = () => {
     const path = window.location.pathname.split('/').pop();
     const script = document.createElement('script');
-    script.src = `https://lok2-wiki-js.vercel.app/pages/${path}.js`;
+    script.src = `https://js.lok2.fr/pages/${path}.js`;
     document.head.appendChild(script);
 };
 getJsFile();
