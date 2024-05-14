@@ -1,4 +1,4 @@
-function (contents, password, phrase) {
+function lock(contents, password, phrase) {
     contents.style.display = 'none';
 
     const lock = document.createElement('div');
@@ -35,6 +35,6 @@ function (contents, password, phrase) {
     parent.insertBefore(lock, contents);
 
     return lock;
-};
+}
 
 window.lock = lock;
