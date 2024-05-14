@@ -1,4 +1,9 @@
 function lock(contents, password, phrase) {
+    if (localStorage.getItem('unlocked-' + password) === 'true') {
+        contents.style.display = 'block';
+        return;
+    }
+
     contents.style.display = 'none';
 
     const lock = document.createElement('div');
@@ -33,6 +38,9 @@ function lock(contents, password, phrase) {
 
     const parent = contents.parentElement;
     parent.insertBefore(lock, contents);
+
+    // localstorage
+    localStorage.setItem('unlocked-' + password, 'true');
 
     return lock;
 }
