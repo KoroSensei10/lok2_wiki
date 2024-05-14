@@ -155,15 +155,5 @@ function initInventory(items) {
     loadInventoryFromLocalStorage();
 }
 
-async function init(items, inventory, selector = '.contents') {
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    const contents = document.querySelector(selector);
-    if (!contents) {
-        return init(items, inventory, selector);
-    }
-    window.contents = contents.firstChild;
-    if (items) initInteractableItems(items);
-    if (inventory) initInventory(items);
-    return contents;
-}
-window.init = init;
+window.initInventory = initInventory;
+window.initInteractableItems = initInteractableItems;

@@ -1,7 +1,6 @@
 window.lock = (contents, password, phrase) => {
     contents.style.display = 'none';
 
-    // créer un élément qui explique qu'il faut mettre un mot de passe pour voir la page, quand le mot de passe est correct ça remet les éléments
     const lock = document.createElement('div');
     const input = document.createElement('input');
     const button = document.createElement('button');
@@ -18,19 +17,22 @@ window.lock = (contents, password, phrase) => {
     lock.appendChild(input);
     lock.appendChild(button);
 
-    button.addEventListener('click', () => {
+    function unlock() {
         if (input.value === password) {
             lock.remove();
             contents.style.display = 'block';
         }
+    }
+
+    button.addEventListener('click', () => {
+        unlock();
     });
     input.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            if (input.value === password) {
-                lock.remove();
-                contents.style.display = 'block';
-            }
-        }
+        unlock();
     });
+
+    const parent = contents.parentElement;
+    parent.insertBefore(lock, contents);
+
     return lock;
 };
