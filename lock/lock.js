@@ -1,4 +1,4 @@
-window.lock = (contents, password, phrase) => {
+function (contents, password, phrase) {
     contents.style.display = 'none';
 
     const lock = document.createElement('div');
@@ -36,3 +36,5 @@ window.lock = (contents, password, phrase) => {
 
     return lock;
 };
+
+window.lock = lock;
