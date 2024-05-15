@@ -45,4 +45,6 @@ function lock(contents, password, phrase) {
     return lock;
 }
 
-window.lock = lock;
+export function setupLock() {
+    window.lock = lock;
+}

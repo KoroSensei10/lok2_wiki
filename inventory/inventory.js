@@ -155,5 +155,7 @@ function initInventory(items) {
     loadInventoryFromLocalStorage();
 }
 
-window.initInventory = initInventory;
-window.initInteractableItems = initInteractableItems;
+export function setupInventory() {
+    window.initInventory = initInventory;
+    window.initInteractableItems = initInteractableItems;
+}
