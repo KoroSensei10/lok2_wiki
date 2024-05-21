@@ -46,13 +46,13 @@
     transition: transform 0.2s ease-in-out;
 }
 
-/* carré simple de 50 par 50 avec des bords en pointillés indiquant que l'on doit y déposer qqch*/
 .drop-zone {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border: 2px dashed #000;
     border-radius: 4px;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 12px;

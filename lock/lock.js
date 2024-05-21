@@ -46,7 +46,7 @@ function lock(contents, password, phrase) {
 }
 
 // même base que pour la fonction lock mais pour débloquer il faut drag un item sur une zone prévue pour ça
-function lockByItem(contents, itemName, phrase) {
+function lockByItem(contents, itemName, phrase, dropMessage = 'Déposer ici') {
 
     if (localStorage.getItem('unlocked-item-' + itemName) === 'true') {
         contents.style.display = 'block';
@@ -62,7 +62,7 @@ function lockByItem(contents, itemName, phrase) {
     dropZone.classList.add('drop-zone');
 
     lock.innerHTML = phrase;
-    dropZone.innerHTML = 'Déposer l\'item';
+    dropZone.innerHTML = dropMessage;
 
     lock.appendChild(dropZone);
 
