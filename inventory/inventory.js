@@ -43,11 +43,13 @@ function initInteractableItems(items) {
         if (element) {
             element.setAttribute('data-name', item.name);
             if (item.type === 'draggable') {
+                element.classList.add('draggable');
                 element.draggable = true;
                 element.addEventListener('dragstart', (event) => {
                     window.draggedItem = item.name;
                 });
             } else if (item.type === 'droppable') {
+                element.classList.add('droppable');
                 element.draggable = false;
                 element.addEventListener('dragover', (event) => {
                     event.preventDefault();

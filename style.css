@@ -61,3 +61,28 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
+
+.draggable:hover {
+    cursor: grab;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.droppable {
+    border: 2px solid #000;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    animation: pulse 10s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
