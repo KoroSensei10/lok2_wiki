@@ -1,7 +1,7 @@
 let items = [
-    { name: 'mouton', type: 'draggable', selector: 'img[src*="famille2.png"]' },
+    { name: 'mouton', type: 'draggable', selector: 'img[src*="famille_2.png"]' },
     {
-        name: 'rick',
+        name: 'famille-empire',
         type: 'draggable',
         selector: '#famille-empire',
     }
