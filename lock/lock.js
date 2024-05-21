@@ -27,6 +27,9 @@ function lock(contents, password, phrase) {
             lock.remove();
             contents.style.display = 'block';
         }
+            // localstorage
+    localStorage.setItem('unlocked-' + password, 'true');
+
     }
 
     button.addEventListener('click', () => {
@@ -38,9 +41,6 @@ function lock(contents, password, phrase) {
 
     const parent = contents.parentElement;
     parent.insertBefore(lock, contents);
-
-    // localstorage
-    localStorage.setItem('unlocked-' + password, 'true');
 
     return lock;
 }
@@ -69,6 +69,7 @@ function lockByItem(contents, itemName, phrase) {
     function unlock() {
         lock.remove();
         contents.style.display = 'block';
+        localStorage.setItem('unlocked-item-' + itemName, 'true');
     }
 
     function onDragOver(event) {
@@ -88,8 +89,7 @@ function lockByItem(contents, itemName, phrase) {
     const parent = contents.parentElement;
     parent.insertBefore(lock, contents);
 
-    localStorage.setItem('unlocked-item-' + itemName, 'true');
-
+ 
     return lock;
 
 }
