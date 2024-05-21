@@ -1,7 +1,7 @@
 window.init().then((contents) => {
     window.lock(
         contents,
-        "gang'reine",
+        "Gang'Reine",
         'Le nom de la page'
     );
 });
