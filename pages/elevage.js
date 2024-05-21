@@ -1,5 +1,10 @@
 let items = [
     { name: 'mouton', type: 'draggable', selector: 'img[src*="famille2.png"]' },
+    {
+        name: 'rick',
+        type: 'draggable',
+        selector: '#famille-empire',
+    }
     // {
     //     name: 'rick',
     //     type: 'droppable',
