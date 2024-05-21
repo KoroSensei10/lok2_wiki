@@ -1,5 +1,5 @@
 let items = [
-    { name: 'familleEmpire', type: 'draggable', selector: 'img[src*="famille_2.png"]' }
+    { name: 'familleEmpire', type: 'draggable', selector: 'img[src="/famille_2.png"]' }
 ];
 
 window.init().then(() => {
