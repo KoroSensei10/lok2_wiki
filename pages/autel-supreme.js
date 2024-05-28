@@ -5,7 +5,7 @@ let items = [
         type: 'droppable',
         selector: '#origine-et-histoire',
         action: () => {
-            if (window.draggedItem !== 'autel') {
+            if (window.draggedItem !== 'clef-etoile') {
                 return;
             }
             window.location.replace(
@@ -13,6 +13,17 @@ let items = [
             );
         },
     },
+    {
+        name: 'autel-image',
+        type: 'droppable',
+        selector: 'src="/autel.png"',
+        action: () => {
+            if (window.draggedItem !== 'clef-etoile') {
+                return;
+            }
+            window.alert('Le mot de passe est : "Rick Astley"');
+        },
+    }
 ];
 
 window.init().then(() => {
