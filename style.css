@@ -71,4 +71,14 @@
 
 .droppable {
     cursor:crosshair;
+    animation: 4s bounce 6s infinite ;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+   90% {
+        transform: translateY(-30px);
+    }
 }
