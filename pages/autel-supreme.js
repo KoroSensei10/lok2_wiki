@@ -16,7 +16,7 @@ let items = [
     {
         name: 'autel-image',
         type: 'droppable',
-        selector: 'src="/autel.png"',
+        selector: 'img[src="/autel.png"]',
         action: () => {
             if (window.draggedItem !== 'clef-etoile') {
                 return;
