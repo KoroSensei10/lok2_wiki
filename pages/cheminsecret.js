@@ -1,7 +1,12 @@
+let items = [
+    {
+        name: 'purpleForest',
+        type: 'draggable',
+        selector: 'img[src="/foret_labyrinthe5.png"]',
+    },
+];
 window.init().then((contents) => {
-    window.lock(
-        contents,
-        '6',
-        'Le nombre de cailloux qui se trouve dans la forêt'
-    );
+    window.initInteractableItems(items);
+    window.initInventory(items);
+    window.lock(contents, '6', 'Combien de cailloux dans la foret ?');
 });
