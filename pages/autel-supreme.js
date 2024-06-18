@@ -5,9 +5,6 @@ let items = [
         type: 'droppable',
         selector: '#origine-et-histoire',
         action: () => {
-            if (window.draggedItem !== 'clef-etoile') {
-                return;
-            }
             window.location.replace(
                 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             );
@@ -18,12 +15,12 @@ let items = [
         type: 'droppable',
         selector: 'img[src="/autel.png"]',
         action: () => {
-            if (window.draggedItem !== 'clef-etoile') {
+            if (window.draggedItem !== 'pierre') {
                 return;
             }
-            window.alert('Le mot de passe est : "Rick Astley"');
+            window.location.replace('https://wiki.lok2.fr/fr/Fin');
         },
-    }
+    },
 ];
 
 window.init().then(() => {
